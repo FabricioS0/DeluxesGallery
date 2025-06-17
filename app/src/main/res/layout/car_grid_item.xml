@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center">
+
+
+    <FrameLayout
+        android:layout_width="160dp"
+        android:layout_height="120dp"
+        android:background="@drawable/car_item_border">
+
+        <ImageView
+            android:id="@+id/carImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+<!--            android:src="@drawable/car_placeholder"/>-->
+    </FrameLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnDetails"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detalhes"
+        android:textColor="#EAEAEA"
+        android:layout_marginTop="8dp"
+        app:strokeColor="#FFC300"
+        app:strokeWidth="1dp"
+        app:backgroundTint="#D62828"
+        app:cornerRadius="4dp"
+        android:padding="8dp"/>
+</LinearLayout>

@@ -1,0 +1,7 @@
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#D62828" /> <!-- Cor de fundo -->
+    <stroke android:width="1dp" android:color="#FFC300" /> <!-- Borda laranja -->
+    <corners android:radius="4dp" /> <!-- Cantos pouco arredondados -->
+</shape>
