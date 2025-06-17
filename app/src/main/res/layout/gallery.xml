@@ -32,10 +32,10 @@
         android:text="+"
         android:textColor="#EAEAEA"
         android:textSize="18sp"
-        app:backgroundTint="#D62828"
-        app:cornerRadius="28dp"
         app:strokeColor="#FFC300"
-        app:strokeWidth="2dp" />
+        app:strokeWidth="1dp"
+        app:backgroundTint="#D62828"
+        app:cornerRadius="4dp"/>
 
 
     <View

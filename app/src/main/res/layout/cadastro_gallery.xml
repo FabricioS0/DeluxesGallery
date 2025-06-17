@@ -1,6 +1,250 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1A1A1D"
+    android:fillViewport="true">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- TopBar -->
+        <LinearLayout
+            android:id="@+id/topBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center_vertical">
+
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Voltar"
+                android:textColor="#EAEAEA"
+                app:strokeColor="#FFC300"
+                app:strokeWidth="1dp"
+                app:backgroundTint="#D62828"
+                app:cornerRadius="4dp"
+                android:textAllCaps="false"
+                android:layout_marginEnd="24dp"/>
+
+            <ImageView
+                android:layout_width="176dp"
+                android:layout_height="137dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="Logo Deluxes Gallery"
+                android:src="@drawable/deluxes_gallery_logo" />
+        </LinearLayout>
+
+        <!-- Linha divisória -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EAEAEA"
+            android:layout_below="@id/topBar"
+            android:layout_marginHorizontal="16dp"/>
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cadastro"
+            android:textColor="#EAEAEA"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_below="@id/topBar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"/>
+
+        <!-- Formulário com ID correto -->
+        <LinearLayout
+            android:id="@+id/formContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_marginTop="32dp"
+            android:layout_marginHorizontal="32dp"
+            android:orientation="vertical"
+
+            android:showDividers="middle"
+            android:padding="8dp">
+
+            <!-- Imagem e botão de seleção -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginBottom="24dp">
+
+                <ImageView
+                    android:id="@+id/ivPreview"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/adicionar_imagem"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Imagem do carro" />
+
+                <Button
+                    android:id="@+id/btnSelecionarImagem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Selecionar Imagem"
+
+                    app:strokeColor="#FFC300"
+                    app:strokeWidth="1dp"
+                    app:backgroundTint="#D62828"
+                    app:cornerRadius="4dp"
+                    android:layout_marginTop="12dp"/>
+            </LinearLayout>
+
+            <!-- Campos -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nome:"
+                    android:textColor="#FFC300"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/etNome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:textSize="18sp"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="#FFC300"
+                    android:hint="Ex: Lamborghini Huracan STO"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cavalaria:"
+                    android:textColor="#FFC300"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/etCavalaria"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="#FFC300"
+                    android:hint="Ex: 640 CV"
+                    android:inputType="number"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Valor:"
+                    android:textColor="#FFC300"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/etValor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="#FFC300"
+                    android:hint="Ex: 4.5 milhões"
+                    android:inputType="numberDecimal"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ano F:"
+                    android:textColor="#FFC300"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/etAno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:textSize="18sp"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="#FFC300"
+                    android:hint="Ex: 2022"
+                    android:inputType="number"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tração:"
+                    android:textColor="#FFC300"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/etTracao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:textSize="18sp"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="#FFC300"
+                    android:hint="Ex: Traseira"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Botão cadastrar -->
+        <Button
+            android:id="@+id/btnCadastrar"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Cadastrar"
+
+            app:strokeColor="#FFC300"
+            app:strokeWidth="1dp"
+            app:backgroundTint="#D62828"
+            app:cornerRadius="4dp"
+            android:layout_marginTop="32dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/formContainer"
+            android:layout_marginBottom="32dp"/>
+    </RelativeLayout>
+</ScrollView>
